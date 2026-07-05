@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Explorer</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar">
+            <h2>🏨 Hotel Explorer</h2>
+
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Hotels</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <h1>Find Your Perfect Stay</h1>
+
+        <p>
+            Explore thousands of hotels with the best prices and ratings.
+        </p>
+    </section>
+
+    <!-- Search & Filter -->
+    <section class="controls">
+
+        <input
+            type="text"
+            id="search"
+            placeholder="Search hotel...">
+
+        <select id="sortPrice">
+            <option value="">Sort by Price</option>
+            <option value="low-high">Low to High</option>
+            <option value="high-low">High to Low</option>
+        </select>
+
+        <select id="rating">
+            <option value="">Filter Rating</option>
+            <option value="5">5 Stars</option>
+            <option value="4">4 Stars & Above</option>
+            <option value="3">3 Stars & Above</option>
+        </select>
+
+    </section>
+
+    <section class="stats">
+
+    <div class="stat-box">
+
+        <h2 id="totalHotels">0</h2>
+
+        <p>Total Hotels</p>
+
+    </div>
+
+    <div class="stat-box">
+
+        <h2 id="avgRating">0</h2>
+
+        <p>Average Rating</p>
+
+    </div>
+
+    <div class="stat-box">
+
+        <h2 id="avgPrice">₹0</h2>
+
+        <p>Average Price</p>
+
+    </div>
+
+</section>
+    <main>
+
+        <!-- Loader -->
+        <div id="loader" class="loader"></div>
+
+        <section class="hotel-container" id="hotelContainer">
+
+        </section>
+
+    </main>
+
+    <!-- Hotel Details Modal -->
+
+    <div id="hotelModal" class="modal">
+
+        <div class="modal-content">
+
+            <span id="closeModal">&times;</span>
+
+            <img id="modalImage" alt="Hotel Image">
+
+            <h2 id="modalName"></h2>
+
+            <p id="modalLocation"></p>
+
+            <p id="modalRating"></p>
+
+            <p id="modalPrice"></p>
+
+            <p id="modalDescription"></p>
+
+        </div>
+
+    </div>
+
+    <footer>
+        <p>© 2026 Hotel Explorer | Made with ❤️</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
